@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CPU · individual page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        }
+        body {
+            background: #f4f8fe;
+            display: flex;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+        .page {
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        /* header / panel */
+        .panel-header {
+            background: white;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            border: 1px solid #e6edf5;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #0b1e33;
+        }
+        .logo i {
+            color: #2563eb;
+            margin-right: 8px;
+        }
+        .badge {
+            background: #eef3f9;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1e2a3a;
+        }
+        .badge i {
+            margin-right: 6px;
+            color: #2563eb;
+        }
+
+        /* product grid — CPU cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 1.8rem 0.8rem 1.2rem;
+            text-align: center;
+            border: 1px solid #eef2f6;
+            transition: 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.01);
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: #c8d6e6;
+            box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.06);
+        }
+        .card .icon {
+            font-size: 2.8rem;
+            color: #1a2a3a;
+            margin-bottom: 6px;
+        }
+        .card .name {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #0b1e33;
+        }
+        .card .spec {
+            font-size: 0.78rem;
+            color: #4b5b6b;
+            background: #f0f4fa;
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            margin: 6px 0 4px;
+        }
+        .card .price {
+            font-weight: 700;
+            color: #0b1e33;
+            margin-top: 6px;
+            font-size: 1.1rem;
+        }
+        .card .price small {
+            font-weight: 400;
+            font-size: 0.75rem;
+            color: #6b7b8b;
+        }
+
+        /* footer */
+        .footer {
+            margin-top: 2.5rem;
+            background: white;
+            border-radius: 40px;
+            padding: 0.7rem 2rem;
+            border: 1px solid #eef2f6;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+            color: #2a4055;
+        }
+        .footer i {
+            color: #2563eb;
+            margin-right: 4px;
+        }
+
+        @media (max-width: 500px) {
+            .panel-header {
+                flex-direction: column;
+                gap: 0.6rem;
+                align-items: stretch;
+                text-align: center;
+            }
+            .badge {
+                align-self: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- main panel header -->
+        <div class="panel-header">
+            <div class="logo"><i class="fas fa-microchip"></i> CPU · Page</div>
+            <div class="badge"><i class="fas fa-cpu"></i> 6 processors · individual</div>
+        </div>
+
+        <!-- CPU product grid -->
+        <div class="grid">
+            <div class="card">
+                <div class="icon"><i class="fas fa-microchip"></i></div>
+                <div class="name">Ryzen 9 7950X</div>
+                <div class="spec">16c / 32t · 5.7GHz</div>
+                <div class="price">$549 <small>USD</small></div>
+            </div>
+            <div class="card">
+                <div class="icon"><i class="fas fa-microchip"></i></div>
+                <div class="name">Core i9-13900K</div>
+                <div class="spec">24c / 32t · 5.8GHz</div>
+                <div class="price">$599 <small>USD</small></div>
+            </div>
+            <div class="card">
+                <div class="icon"><i class="fas fa-microchip"></i></div>
+                <div class="name">Ryzen 7 7800X3D</div>
+                <div class="spec">8c / 16t · 5.0GHz</div>
+                <div class="price">$449 <small>USD</small></div>
+            </div>
+            <div class="card">
+                <div class="icon"><i class="fas fa-microchip"></i></div>
+                <div class="name">Core i7-13700K</div>
+                <div class="spec">16c / 24t · 5.4GHz</div>
+                <div class="price">$409 <small>USD</small></div>
+            </div>
+            <div class="card">
+                <div class="icon"><i class="fas fa-microchip"></i></div>
+                <div class="name">Ryzen 5 7600X</div>
+                <div class="spec">6c / 12t · 5.3GHz</div>
+                <div class="price">$249 <small>USD</small></div>
+            </div>
+            <div class="card">
+                <div class="icon"><i class="fas fa-microchip"></i></div>
+                <div class="name">Core i5-13600K</div>
+                <div class="spec">14c / 20t · 5.1GHz</div>
+                <div class="price">$319 <small>USD</small></div>
+            </div>
+        </div>
+
+        <!-- dummy panel footer -->
+        <div class="footer">
+            <span><i class="fas fa-cubes"></i> CPU category · individual page</span>
+            <span><i class="fas fa-arrow-right"></i> dummy panel view</span>
+        </div>
+    </div>
+</body>
+</html>
